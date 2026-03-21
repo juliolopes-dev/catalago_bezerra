@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ]
+    },
+    "bzrlink-db": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:682a1941eb5e3f2a26d5@217.216.83.122:4121/db-bezerra-bzrlink?sslmode=disable"
+      ]
+    }
+  }
+}

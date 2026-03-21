@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Paleta oficial Bezerra Autopeças ── */
+  --color-brand-yellow: #F5AD00;
+  --color-brand-yellow-dark: #D99900;
+  --color-brand-yellow-light: #FFF3CC;
+  --color-brand-yellow-muted: #FEF3C7;
+
+  --color-brand-black: #252525;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-gray: #3F3F3F;
+  --color-brand-gray-mid: #4F4F4F;
+  --color-brand-text: #989898;
+  --color-brand-light: #D3D3D3;
+  --color-brand-surface: #F8F8F8;
+
+  /* Status semântico */
+  --color-success: #16a34a;
+  --color-success-muted: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-muted: #fef3c7;
+  --color-danger: #dc2626;
+  --color-danger-muted: #fee2e2;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Consolas", monospace;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Forçar Autofill a respeitar o tema Dark no Login */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 100px #1E293B inset !important;
+    -webkit-text-fill-color: #F8FAFC !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F8FAFC;
+  color: #334155;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}

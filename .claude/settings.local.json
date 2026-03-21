@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/julio/.claude/**)",
+      "Bash(psql \"postgresql://postgres:682a1941eb5e3f2a26d5@217.216.83.122:4121/db-bezerra-bzrlink?sslmode=disable\" -c \"\\\\dt public.*\")",
+      "Bash(npx -y pg-cli \"postgresql://postgres:682a1941eb5e3f2a26d5@217.216.83.122:4121/db-bezerra-bzrlink?sslmode=disable\")",
+      "Bash(node -e \":*)",
+      "Bash(npx -y @modelcontextprotocol/server-postgres \"postgresql://postgres:682a1941eb5e3f2a26d5@217.216.83.122:4121/db-bezerra-bzrlink?sslmode=disable\")",
+      "Bash(npx -y @modelcontextprotocol/server-postgres --version)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(printf '{\"\"\"\"jsonrpc\"\"\"\":\"\"\"\"2.0\"\"\"\",\"\"\"\"id\"\"\"\":1,\"\"\"\"method\"\"\"\":\"\"\"\"initialize\"\"\"\",\"\"\"\"params\"\"\"\":{\"\"\"\"protocolVersion\"\"\"\":\"\"\"\"2024-11-05\"\"\"\",\"\"\"\"capabilities\"\"\"\":{},\"\"\"\"clientInfo\"\"\"\":{\"\"\"\"name\"\"\"\":\"\"\"\"test\"\"\"\",\"\"\"\"version\"\"\"\":\"\"\"\"1.0\"\"\"\"}}}\\\\n{\"\"\"\"jsonrpc\"\"\"\":\"\"\"\"2.0\"\"\"\",\"\"\"\"id\"\"\"\":2,\"\"\"\"method\"\"\"\":\"\"\"\"tools/list\"\"\"\",\"\"\"\"params\"\"\"\":{}}\\\\n')",
+      "mcp__bzrlink-db__query",
+      "mcp__playwright__playwright_navigate",
+      "mcp__playwright__playwright_screenshot",
+      "Bash(npx -y mcp-postgres --help)",
+      "Bash(DATABASE_URL=\"postgresql://postgres:682a1941eb5e3f2a26d5@217.216.83.122:4121/db-bezerra-bzrlink?sslmode=disable\" echo '{\"\"\"\"jsonrpc\"\"\"\":\"\"\"\"2.0\"\"\"\",\"\"\"\"id\"\"\"\":1,\"\"\"\"method\"\"\"\":\"\"\"\"tools/list\"\"\"\",\"\"\"\"params\"\"\"\":{}}')",
+      "Bash(npx -y mcp-postgres)",
+      "Bash(mkdir -p /c/Projetos-Web/catalogo_bezerra/_tmp_pg)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx @nestjs/cli@latest --version)",
+      "Bash(npm --version)",
+      "Bash(npx prisma:*)",
+      "Bash(npx tsx:*)",
+      "Bash(ls node_modules/prisma/build/config*.js)",
+      "Bash(DATABASE_URL=\"postgresql://postgres:682a1941eb5e3f2a26d5@217.216.83.122:4121/db-bezerra-bzrlink?sslmode=disable\" npx tsx -e \"import { PrismaClient } from ''@prisma/client''; const p = new PrismaClient\\(\\); console.log\\(''OK''\\)\")",
+      "Bash(npm list:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Read(//c/Users/julio/Downloads/**)",
+      "mcp__playwright__playwright_get_visible_html",
+      "mcp__playwright__playwright_evaluate",
+      "mcp__playwright__playwright_get",
+      "mcp__playwright__playwright_fill",
+      "Read(//tmp/**)",
+      "Bash(curl -s -X POST http://localhost:3000/api/auth/login -H \"Content-Type: application/json\" -d '{\"\"\"\"email\"\"\"\":\"\"\"\"juliofranlopes18@gmail.com\"\"\"\",\"\"\"\"senha\"\"\"\":\"\"\"\"bezerra123\"\"\"\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/auth/login -H \"Content-Type: application/json\" -d '{\"\"email\"\":\"\"juliofranlopes18@gmail.com\"\",\"\"senha\"\":\"\"123456\"\"}')",
+      "mcp__playwright__playwright_click",
+      "mcp__playwright__playwright_resize",
+      "Bash(node -e \"const fs=require\\(''fs''\\); const s=fs.statSync\\(''public/logo-bezerra.png''\\); console.log\\(''Tamanho:'', s.size, ''bytes''\\)\")",
+      "Bash(npx vite:*)",
+      "Bash(npx dotenv:*)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\julio\\.claude\\memory"
+    ]
+  }
+}
