@@ -14,7 +14,7 @@ RUN npm ci --include=dev
 COPY backend/prisma ./prisma
 RUN npx prisma generate
 COPY backend/ .
-RUN ./node_modules/.bin/tsc
+RUN node node_modules/typescript/bin/tsc
 
 # ── Stage 3: Imagem final ───────────────────────────────────────────
 FROM node:20-alpine
