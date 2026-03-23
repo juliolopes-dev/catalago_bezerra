@@ -597,7 +597,7 @@ export function Catalogo() {
                   >
                     <span className={`text-[11px] font-bold ${precoEscolhido === tabela ? 'text-[#1C1C1C]' : 'text-[#555]'}`}>{label}</span>
                     <span className={`text-[13px] font-black tabular-nums ${precoEscolhido === tabela ? 'text-[#F5AD00]' : 'text-[#1C1C1C]'}`}>
-                      {formatPreco(modalPreco[tabela])}
+                      {formatPreco(modalPreco[tabela] ?? null)}
                     </span>
                   </button>
                 ))}

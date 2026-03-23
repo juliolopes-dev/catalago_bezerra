@@ -22,7 +22,7 @@ export function AdminUsuarios() {
       <PageHeader
         title="Usuários"
         subtitle="Gerencie usuários e defina tabelas de preço"
-        breadcrumb={['Admin', 'Usuários']}
+
         actions={
           <Button size="sm">
             <Plus className="h-3.5 w-3.5" />
