@@ -87,7 +87,7 @@ const produtosRoutes: FastifyPluginAsync = async (fastify) => {
           bloqueado_f04::numeric,
           bloqueado_f05::numeric,
           bloqueado_f06::numeric
-          ${perfil === 'admin' ? ', preco2::numeric, preco3::numeric, preco4::numeric' : ''}
+          ${(perfil === 'admin' || perfil === 'vendedor') ? ', preco2::numeric, preco3::numeric, preco4::numeric' : ''}
         FROM vw_produtos_ativos
         WHERE ${clause}
         ORDER BY descricao
