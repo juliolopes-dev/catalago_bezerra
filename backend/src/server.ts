@@ -10,6 +10,7 @@ import jwtPlugin from './plugins/jwt'
 import authRoutes from './routes/auth'
 import produtosRoutes from './routes/produtos'
 import carrinhoRoutes from './routes/carrinho'
+import adminRoutes from './routes/admin'
 
 const app = Fastify({
   logger: {
@@ -41,6 +42,7 @@ async function start() {
   await app.register(authRoutes, { prefix: '/api/auth' })
   await app.register(produtosRoutes, { prefix: '/api/produtos' })
   await app.register(carrinhoRoutes, { prefix: '/api/carrinho' })
+  await app.register(adminRoutes, { prefix: '/api/admin/usuarios' })
 
   // Serve frontend em produção
   if (process.env.NODE_ENV === 'production') {
