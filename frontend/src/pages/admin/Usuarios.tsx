@@ -127,11 +127,13 @@ export function AdminUsuarios() {
     }
   }
 
-  const filtrados = usuarios.filter(u =>
-    u.nome.toLowerCase().includes(busca.toLowerCase()) ||
-    u.email.toLowerCase().includes(busca.toLowerCase()) ||
-    (u.empresa ?? '').toLowerCase().includes(busca.toLowerCase())
-  )
+  const filtrados = usuarios
+    .filter(u =>
+      u.nome.toLowerCase().includes(busca.toLowerCase()) ||
+      u.email.toLowerCase().includes(busca.toLowerCase()) ||
+      (u.empresa ?? '').toLowerCase().includes(busca.toLowerCase())
+    )
+    .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'))
 
   const salvando = criando || editandoReq
 
