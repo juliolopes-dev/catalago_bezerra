@@ -10,11 +10,11 @@ RUN npm run build
 FROM node:20-alpine AS backend-builder
 WORKDIR /app/backend
 COPY backend/package*.json ./
-RUN npm ci
+RUN npm ci --include=dev
 COPY backend/prisma ./prisma
 RUN npx prisma generate
 COPY backend/ .
-RUN npm run build
+RUN ./node_modules/.bin/tsc
 
 # ── Stage 3: Imagem final ───────────────────────────────────────────
 FROM node:20-alpine
